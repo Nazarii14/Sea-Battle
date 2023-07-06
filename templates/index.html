@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Battle Game!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="greetings">Welcome to the sea battle game!</div>
+        <div id="message">Player 2, close your eyes. Player 1, choose your ships layout and click 'Confirm' when you finished</div>
+        <div class="boards">
+            <div class="player1">
+                <h3 id="player1">Player 1</h3>
+                <table class="board1">
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                </table>
+                <div class="lower-buttons">
+                    <button id="regenerateButton1" type="button" class="btn btn-primary">regenerate</button>
+                    <button id="confirm1" type="button" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+
+
+            <div class="buttons">
+                <a id="arrow"></a>
+                <button id="start-new-game" type="button" class="btn btn-primary">Start a new game</button>
+            </div>
+
+
+            <div class="player2">
+                <h3 id="player2">Player 2</h3>
+                <table class="board2">
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                    <tr>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                        <td class="cleared"></td>
+                    </tr>
+                </table>
+                <div class="lower-buttons">
+                    <button id="regenerateButton2" type="button" class="btn btn-primary">regenerate</button>
+                    <button id="confirm2" type="button" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

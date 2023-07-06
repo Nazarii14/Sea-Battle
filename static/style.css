@@ -1,0 +1,99 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgb(116, 36, 116), rgb(142, 30, 30))
+}
+
+.container {
+    width: 85%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.greetings {
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+
+#message {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.buttons {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow {
+    font-size: 5rem;
+}
+
+.player1, .player2 {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+#player1 {
+    font-size: 35px;
+    color: rgb(4, 255, 0);
+}
+
+#player2 {
+    font-size: 35px;
+    color: rgb(255, 0, 0);
+}
+
+td {
+    margin:0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+td:hover {
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.lower-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#regenerateButton1, #regenerateButton2 {
+    margin: 10px;
+    width: 180px;
+}
+
+#confirm1, #confirm2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:180px;
+}
+
+.cleared {
+    background-color: aqua
+}
+.ship {
+    background-color: rgb(242, 255, 0);
+}
+.missed {
+    background-color: rgb(108, 191, 191)
+}
